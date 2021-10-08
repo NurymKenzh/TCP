@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Listener
 {
-    public partial class Form1 : Form
+    public partial class FormListener : Form
     {
-        public Form1()
+        public FormListener()
         {
             InitializeComponent();
         }

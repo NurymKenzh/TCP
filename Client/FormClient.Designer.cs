@@ -1,7 +1,7 @@
 ﻿
 namespace Client
 {
-    partial class Form1
+    partial class FormClient
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,20 +29,42 @@ namespace Client
         /// </summary>
         private void InitializeComponent()
         {
+            this.backgroundWorkerClient = new System.ComponentModel.BackgroundWorker();
+            this.textBoxClient = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Form1
+            // backgroundWorkerClient
+            // 
+            this.backgroundWorkerClient.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerClient_DoWork);
+            // 
+            // textBoxClient
+            // 
+            this.textBoxClient.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxClient.Location = new System.Drawing.Point(0, 0);
+            this.textBoxClient.Multiline = true;
+            this.textBoxClient.Name = "textBoxClient";
+            this.textBoxClient.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxClient.Size = new System.Drawing.Size(800, 450);
+            this.textBoxClient.TabIndex = 0;
+            // 
+            // FormClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.textBoxClient);
+            this.Name = "FormClient";
+            this.Text = "FormClient";
+            this.Load += new System.EventHandler(this.FormClient_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.ComponentModel.BackgroundWorker backgroundWorkerClient;
+        private System.Windows.Forms.TextBox textBoxClient;
     }
 }
 
